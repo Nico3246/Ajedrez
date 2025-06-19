@@ -1,7 +1,11 @@
 
+BOARD_SIZE = 8
+
+
 class Tablero:
     def __init__(self):
-        self.tablero = [[None for _ in range(8)] for _ in range(8)]#crea un tablero 3x3 vacio
+        # crea un tablero vacío de tamaño BOARD_SIZE x BOARD_SIZE
+        self.tablero = [[None for _ in range(BOARD_SIZE)] for _ in range(BOARD_SIZE)]
         self.colocarFichas()
 
     def pintar(self,lineaGanadora=None):#muestra el tablero la linea ganadora sera la que se pinte en rojo
@@ -35,6 +39,7 @@ class Tablero:
         nuevo = Tablero()
         nuevo.tablero = [fila[:] for fila in self.tablero]
         return nuevo
+
 
 
 

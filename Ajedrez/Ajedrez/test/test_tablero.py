@@ -10,6 +10,6 @@ def test_initial_layout_and_clear():
     # filas 6 y 7 blancas
     assert t.tablero[7] == ['R','N','B','Q','K','B','N','R']
     assert all(p=='P' for p in t.tablero[6])
-    # no haya None, usa ' ' para vacías
+    # casillas vacías deben contener None
     for r in range(2,6):
-        assert all(c == ' ' for c in t.tablero[r])
+        assert all(c is None for c in t.tablero[r])
